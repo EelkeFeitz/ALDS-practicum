@@ -27,9 +27,9 @@ super_list:
 """""
 def create_lists(amount, length, lower_range, upper_range):
     super_list = []
-    for i in range(0, amount):
+    for i in range(amount):
         sub_list = []
-        for j in range(0, length):
+        for j in range(length):
             element = random.randint(lower_range, upper_range)
             sub_list.append(element)
         super_list.append(sub_list)
@@ -52,12 +52,9 @@ overlay:
 """""
 def check_overlay(lst):
     overlay = 0
-    for i in range(0, len(lst)):
-        if len(set(lst[i])) < len(lst[i]):
+    for e in lst:
+        if len(set(e)) != len(e):
             overlay += 1
-#        for j in range(0, len(lst[i])):
-#            for k in range(j, len(lst[i])):
-#                if lst[]
     return overlay
 
 studenten = create_lists(100, 23, 1, 365)
