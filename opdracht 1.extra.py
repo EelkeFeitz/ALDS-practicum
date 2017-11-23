@@ -15,7 +15,7 @@ next_seq : lst
 """""
 def next_las_seq(x):
     next_seq = []
-    for i in range(0, len(x)):
+    for i in range(len(x)):
         curr_num = x[i]
         if i == 0:
             prev_num = x[i] - 1
