@@ -12,14 +12,12 @@ highest: int
     returns the highest int in the list
 """""
 def my_max(a):
-    assert (len(a) != 0)  # raises an error if a is an empty lst
+    assert len(a) != 0  # raises an error if a is an empty lst
     highest = a[0]
-    for i in range(0, len(a)):
-        assert (
-            (type(a[i]) == int) | (type(a[i]) == float)
-        )
-        if a[i] > highest:
-            highest = a[i]
+    for i in a:
+        assert type(i) == int or type(i) == float
+        if i > highest:
+            highest = i
     return highest
 
 
